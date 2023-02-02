@@ -99,7 +99,7 @@ Class Upload extends CI_Controller{
         echo 0;
         }else{
             $time = time();
-        if(1==1){
+        if($this->padiconfig->development){
             $target_dir = '/home/klien/www/hotspot/uploads/brands/';
         }else{
             $target_dir = 'C:\phpworkspace\hotspot\uploads\brands\\';
@@ -115,7 +115,7 @@ Class Upload extends CI_Controller{
     function remove(){
         $removetype= $this->uri->segment(3);
         $name = $this->uri->segment(4);
-        if(1==1){
+        if(1==2){
             $target_dir = '/home/klien/www/hotspot/uploads/'.$removetype.'/';
         }else{
             $target_dir = 'C:\phpworkspace\hotspot\uploads\\'.$removetype.'\\';
