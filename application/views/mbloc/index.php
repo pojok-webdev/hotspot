@@ -1,6 +1,6 @@
 <?php
 $imageserver = "http://padiweb.padinet.com/";
-if(1==1){
+if($this->padiconfig->development){
   $mac = $_POST['mac'];
   $ip = $_POST['ip'];
   $username = $_POST['username'];
