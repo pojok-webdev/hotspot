@@ -126,11 +126,11 @@
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="#" style="background:red;">Set Tidak digunakan</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item btnsetimage" role="banner1">Set sebagai Banner 1</a>
-                      <a class="dropdown-item btnsetimage" role="banner2">Set sebagai Banner 2</a>
-                      <a class="dropdown-item btnsetimage" role="banner3">Set sebagai Banner 3</a>
-                      <a class="dropdown-item btnsetimage" role="banner4">Set sebagai Banner 4</a>
-                    </div>
+                        <a class="dropdown-item btnsetimage" role="banner1">Set sebagai Banner 1</a>
+                        <a class="dropdown-item btnsetimage" role="banner2">Set sebagai Banner 2</a>
+                        <a class="dropdown-item btnsetimage" role="banner3">Set sebagai Banner 3</a>
+                        <a class="dropdown-item btnsetimage" role="banner4">Set sebagai Banner 4</a>
+                      </div>
 
                   </div>
                 </div>
@@ -242,15 +242,14 @@
   })
   $('.btnsetimage').click(function(){
     that = $(this)
+    console.log(that)
     $.ajax({
-      url:'/main/setbrand',
+      url:'/main/setbanner',
       type:'post',
       dataType:'json',
       data:{
-        brand_id:1,
-        image:$(this).prop('id'),
-        name:$(this).prop('id'),
-        role:'brand'+'<?php echo $brand_id;?>'
+        name:that.stairUp({level:3}).find('.btnRemoveBrand').attr('id'),
+        role:that.attr('role')
       }
     })
     .done(res=>{

@@ -111,15 +111,15 @@ Class Main extends CI_Controller{
         ));
         echo json_encode('{"result":"ok"}');
     }
-    function setbrand(){
+    function setbanner(){
         $params = $this->input->post();
         /*$this->crud->upsert('brands',array(
             'name'=>$params->name
         ));*/
-        $this->crud->delete('brands',array(
+        /*$this->crud->delete('brands',array(
             'role'=>$params['role']
-        ));
-        $this->crud->save('brands',array(
+        ));*/
+        $this->crud->upsert('banners',array(
             'name'=>$params['name'],
             'role'=>$params['role']
         ));

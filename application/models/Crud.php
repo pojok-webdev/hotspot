@@ -49,14 +49,15 @@ Class Crud extends CI_Model{
         );
     }
     function upsert($tableName,$data){
-        $cols = array();$vals = array();
+        $cols = array();$vals = array();$alt = array();
         foreach($data as $key=>$val){
             array_push($cols,$key);
             array_push($vals,$val);
+            array_push($alt,$key.'="'.$val.'" ');
         }
         $sql = 'insert into ' . $tableName . ' (' . implode(',',$cols) . ') ';
-        $sql.= 'values ' . $data['columns'] . ' ("' . implode('","',$vals) . '" ) ';
-        $sql.= 'on duplicate key update ';
+        $sql.= 'values ("' . implode('","',$vals) . '" ) ';
+        $sql.= 'on duplicate key update '.implode(',',$alt). ' ';
         $ci = & get_instance();
         $que = $ci->db->query($sql);
         return array(
