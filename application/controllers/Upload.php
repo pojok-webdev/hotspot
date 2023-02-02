@@ -18,7 +18,7 @@ Class Upload extends CI_Controller{
         /* Upload file */
             $time = time();
         $target_dir = $this->config->item('uploadpath');//"C:\phpworkspace\imageserver\uploads\ ";//"/uploads/";
-        if(1==1){
+        if($this->padiconfig->development){
             $target_dir = '/home/klien/www/hotspot/uploads/brands/';
         }else{
             $target_dir = 'C:\phpworkspace\hotspot\uploads\carousels\\';
@@ -46,7 +46,7 @@ Class Upload extends CI_Controller{
         /* Upload file */
             $time = time();
         $target_dir = $this->config->item('uploadpath');//"C:\phpworkspace\imageserver\uploads\ ";//"/uploads/";
-        if(1==1){
+        if($this->padiconfig->development){
             $target_dir = '/home/klien/www/hotspot/uploads/carousels/';
         }else{
             $target_dir = 'C:\phpworkspace\hotspot\uploads\carousels\\';
@@ -73,7 +73,7 @@ Class Upload extends CI_Controller{
         }else{
         /* Upload file */
             $time = time();
-        if(1==1){
+        if($this->padiconfig->development){
             $target_dir = '/home/klien/www/hotspot/uploads/videos/';
         }else{
             $target_dir = 'C:\phpworkspace\hotspot\uploads\videos\\';
@@ -115,7 +115,7 @@ Class Upload extends CI_Controller{
     function remove(){
         $removetype= $this->uri->segment(3);
         $name = $this->uri->segment(4);
-        if(1==2){
+        if($this->padiconfig->development){
             $target_dir = '/home/klien/www/hotspot/uploads/'.$removetype.'/';
         }else{
             $target_dir = 'C:\phpworkspace\hotspot\uploads\\'.$removetype.'\\';
