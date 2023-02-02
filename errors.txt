@@ -1,0 +1,20 @@
+Array ( 
+    [mac] => 94:65:9C:7E:DE:C0 
+    [ip] => 172.29.1.247 
+    [username] => 
+    [link-login] => http://database.padinet.com/login?dst=http%3A%2F%2Fwww.msftconnecttest.com%2Fredirect 
+    [link-orig] => http://www.msftconnecttest.com/redirect 
+    [error] => 
+    [trial] => yes 
+    [chap-id] => \332 
+    [chap-challenge] => \220\301\014\003\016\125\143\071\225\172\355\156\111\243\167\037 
+    [link-login-only] => http://database.padinet.com/login 
+    [link-orig-esc] => http%3A%2F%2Fwww.msftconnecttest.com%2Fredirect 
+    [mac-esc] => 94%3A65%3A9C%3A7E%3ADE%3AC0 
+    [identity] => ROUTER1TESTER 
+    [bytes-in-nice] => 0 B 
+    [bytes-out-nice] => 0 B 
+    [session-time-left] => 
+    [uptime] => 0s 
+    [refresh-timeout] => 
+    [link-status] => http://database.padinet.com/status )

@@ -1,0 +1,9 @@
+1. multiple video
+2. prioritas video
+3. count down pemutaran video (done)
+4. redirect premium user (done)
+5. tombol hapus pada brand(done)
+6. cek default sebelum hapus
+7. tandai file terpakai (current image)
+8. logo paditech dan mbloc(done)
+9. Otentikasi

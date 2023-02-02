@@ -1,0 +1,54 @@
+budgeting
+
+|  4 | ketut    | ketut@padi.net.id | ncgvakLkYTI2ptpTnnwQWLNGlF33sW3Lf206e4d5666d4adb24b470f0fc52cf25fae8dab3 | ncgvakLkYTI2ptpTnnwQWLNGlF33sW3L |
+|  3 | puji     | puji@padi.net.id | pAffWt8BQF4ZZAKDFdRwyNEUmLjnqf43e6234977c41e5fd3da23720487e65b719a674826 | pAffWt8BQF4ZZAKDFdRwyNEUmLjnqf43 |
+
+
+update users set password='pAffWt8BQF4ZZAKDFdRwyNEUmLjnqf43e6234977c41e5fd3da23720487e65b719a674826',salt='pAffWt8BQF4ZZAKDFdRwyNEUmLjnqf43' where id=4;
+
+
+update users set password='ncgvakLkYTI2ptpTnnwQWLNGlF33sW3Lf206e4d5666d4adb24b470f0fc52cf25fae8dab3',salt='ncgvakLkYTI2ptpTnnwQWLNGlF33sW3L' where id=4;
+
+create table brands (id int primary key auto_increment,name varchar(200),isactive varchar(1) default '0',createuser varchar(200),createdate timestamp default current_timestamp);
+
+
+
+faishol, taufan affandi,anwar,agung suprayitno,Agdul Ghofur,Mchoirul,Nova Tri FIrmansyah
+
+select * from julehaja_members.members where nickname like "%nova%";
+
+M Faisho Muarrof
+Taufan Affandi 
+anwar 
+agung suprayitno belum ada foto 68
+
+
+https://www.msn.com/id-id/berita/other/seorang-nenek-76-tahun-hamil-setelah-dinikahi-remaja-19-tahun/ar-AA15vRfl?ocid=wispr&pc=u477&cvid=2efcbb04b49d49fa84df5ddb651da3c8
+
+
+
+
+bca 4.782.538,24
+bsi 4.070.681
+cimb 5.393.177,61
+
+14.246.396
+
+
+create table carousels (id int primary key auto_increment,name varchar(200),role varchar(20),isactive varchar(1),createuser varchar(200),createdate timestamp default current_timestamp());
+
+
+
+
+
+select ipaddress,dt,count(dt)cnt from (  select ipaddress,date_format(createdate,"%Y-%m-%d") dt from counter  )A group by ipaddress,dt ;
+
+create table bannercounters (id int primary key auto_increment,name varchar(100),ipaddress varchar(20),createdate timestamp default current_timestamp());
+
+
+link free:
+http://mbloc.padinet.com/login?dst=http%3A%2F%2Fwww.msftconnecttest.com%2Fredirect&username=T-94%3A65%3A9C%3A7E%3ADE%3AC0
+create table visitors(id int primary key auto_increment,name varchar(200),gender varchar(1),age varchar(3),hp varchar(30),email varchar(100),medsos varchar(200),createdate timestamp default current_timestamp());
+
+
+http://mbloc.padinet.com/login?dst=http%3A%2F%2Fwww.msftconnecttest.com%2Fredirect&username=T-94%3A65%3A9C%3A7E%3ADE%3AC0
