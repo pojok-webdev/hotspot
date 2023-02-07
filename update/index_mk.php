@@ -1,31 +1,31 @@
 <?php
 $imageserver = "http://padiweb.padinet.com/";
-if(!$this->config->item('development')){
-  $mac = $_POST['mac'];
-  $ip = $_POST['ip'];
-  $username = $_POST['username'];
-  $linklogin = $_POST['link-login'];
-  $linkorig = $_POST['link-orig'];//17:02
-  $loginby = '';//$_POST['login-by'];//12:38
-  $chapid = $_POST['chap-id'];
-  $chapchallenge = $_POST['chap-challenge'];
-  $linkloginonly = $_POST['link-login-only'];
-  $linkorigesc = $_POST['link-orig-esc'];
-  $macesc = $_POST['mac-esc'];
-}else{
-  $imageserver = "http://imageserver/";
-  $mac = "";
-  $ip = "";
-  $username = "";
-  $linklogin = "";
-  $linkorig = "";
-  $loginby = '';//$_POST['login-by'];//12:38
-  $chapid = "";
-  $chapchallenge = "";
-  $linkloginonly = "";
-  $linkorigesc = "";
-  $macesc = "";
-  }
+if (!$this->config->item('development')) {
+    $mac = $_POST['mac'];
+    $ip = $_POST['ip'];
+    $username = $_POST['username'];
+    $linklogin = $_POST['link-login'];
+    $linkorig = $_POST['link-orig']; //17:02
+    $loginby = ''; //$_POST['login-by'];//12:38
+    $chapid = $_POST['chap-id'];
+    $chapchallenge = $_POST['chap-challenge'];
+    $linkloginonly = $_POST['link-login-only'];
+    $linkorigesc = $_POST['link-orig-esc'];
+    $macesc = $_POST['mac-esc'];
+} else {
+    $imageserver = "http://imageserver/";
+    $mac = "";
+    $ip = "";
+    $username = "";
+    $linklogin = "";
+    $linkorig = "";
+    $loginby = ''; //$_POST['login-by'];//12:38
+    $chapid = "";
+    $chapchallenge = "";
+    $linkloginonly = "";
+    $linkorigesc = "";
+    $macesc = "";
+}
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -51,19 +51,19 @@ if(!$this->config->item('development')){
         <header class="header-area stricky">
             <div class="container">
                 <div class="row">
-                    <div class="col-6 col-md-4 order-md-first">
+                    <div class="col-6 col-md-2 order-md-first">
                         <div class="logo-left float-left">
-                            <img src="/assets/mbloc/tech.jpg" alt="paditechnology" />
+                            <img src="tech.jpg" alt="paditechnology" />
                         </div>
                     </div>
-                    <div class="col-md-4 order-md-second order-last">
+                    <div class="col-md-8 order-md-second order-last">
                         <div class="title text-center">
-                            <h3>Internet Access</h3>
+                            <h3>Welcome to secure and fast Internet !</h3>
                         </div>
                     </div>
-                    <div class="col-6 col-md-4 order-md-last">
+                    <div class="col-6 col-md-2 order-md-last">
                         <div class="logo-right float-right">
-                            <img src="/assets/mbloc/mbloc.webp" alt="mbloc" />
+                            <img src="mbloc.webp" alt="mbloc" />
                         </div>
                     </div>
                 </div>
@@ -108,11 +108,11 @@ if(!$this->config->item('development')){
                             <div class="reguler-user">
                                 <div class="text-inline">Free Access</div>
                                 <button class="btn btn-primary" type="button" id="button-reguler" data-bs-toggle="modal" data-bs-target="#videoModal">Click here</button>
-                                
+
                             </div>
                             <div class="premium-user">
                                 <h3>Premium user</h3>
-                                <form name="login" action="<?php echo $linkloginonly; ?>" method="post" onSubmit="return doLogin()" >
+                                <form name="login" action="<?php echo $linkloginonly; ?>" method="post" onSubmit="return doLogin()">
                                     <div class="form-input input-group flex-nowrap">
                                         <span class="input-group-text" id="addon-wrapping"><i class="fa fa-user"></i></span>
                                         <input type="hidden" name="dst" value="<?php echo $linkorig; ?>" />
@@ -139,7 +139,7 @@ if(!$this->config->item('development')){
                         <div class="col-md-4">
                             <div class="title">Get Special Offers</div>
                         </div>
-                        <div class="col-md-2 col-6 ads" id="banner1"><img src="/uploads/brands<?php echo '/main/banner/1'?>" alt="mbloc" /></div>
+                        <div class="col-md-2 col-6 ads" id="banner1"><img src="/uploads/brands<?php echo '/main/banner/1' ?>" alt="mbloc" /></div>
                         <div class="col-md-2 col-6 ads" id="banner2"><img src="/assets/mbloc/img/smallads_mbloc.jpg" alt="mbloc" /></div>
                         <div class="col-md-2 col-6 ads" id="banner3"><img src="/assets/mbloc/img/smallads_mbloc.jpg" alt="mbloc" /></div>
                         <div class="col-md-2 col-6 ads" id="banner4"><img src="/assets/mbloc/img/smallads_mbloc.jpg" alt="mbloc" /></div>
@@ -181,8 +181,8 @@ if(!$this->config->item('development')){
                     <div id="timer-count">
                     </div>
                     <button type="button" class="btn btn-light" data-bs-dismiss="modal" id="btn-access" data-bs-toggle="modal" data-bs-target="#formUser" disabled="disabled">Start</button>
-                    
-                    
+
+
                 </div>
             </div>
         </div>
@@ -238,9 +238,9 @@ if(!$this->config->item('development')){
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-success" id="btn-form">Sign in</button>
-                        <a style="color: #FF8080"href="<?php echo $linkloginonly; ?>?dst=<?php echo $linkorigesc; ?>&username=T-<?php echo $macesc; ?>"></a>
+                        <a style="color: #FF8080" href="<?php echo $linkloginonly; ?>?dst=<?php echo $linkorigesc; ?>&username=T-<?php echo $macesc; ?>"></a>
                     </div>
-                </form>
+                    </form>
             </div>
         </div>
     </div>
@@ -267,26 +267,26 @@ if(!$this->config->item('development')){
                     $('#btn-access').removeClass('btn btn-light').addClass('btn btn-primary');
                 }, 10000);
             });
-            $('#btn-access').click(function(){
-               // window.location.href = '<?php echo $linkloginonly;?>?dst=<?php echo $linkorigesc;?>&username=T-<?php echo $macesc;?>'
-                //window.location.href = '<?php echo $linkorig;?>?username=T-<?php echo $macesc;?>';
+            $('#btn-access').click(function() {
+                // window.location.href = '<?php echo $linkloginonly; ?>?dst=<?php echo $linkorigesc; ?>&username=T-<?php echo $macesc; ?>'
+                //window.location.href = '<?php echo $linkorig; ?>?username=T-<?php echo $macesc; ?>';
             })
-            $('.ads').on('click',function(){
-                console.log('banner clicked',$(this).attr('id'))
+            $('.ads').on('click', function() {
+                console.log('banner clicked', $(this).attr('id'))
                 $.ajax({
-                    url:'/login/bannerclick',
-                    type:'post',
-                    dataType:'json',
-                    data:{
-                        name:$(this).attr('id')
-                    }
-                })
-                .done(res=>{
-                    console.log('Sukses record banner click',res)
-                })
-                .fail(err=>{
-                    console.log('Gagal record banner click',err)
-                })
+                        url: '/login/bannerclick',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {
+                            name: $(this).attr('id')
+                        }
+                    })
+                    .done(res => {
+                        console.log('Sukses record banner click', res)
+                    })
+                    .fail(err => {
+                        console.log('Gagal record banner click', err)
+                    })
             })
 
         });
@@ -296,19 +296,20 @@ if(!$this->config->item('development')){
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script>
         var x = document.getElementById("demo");
+
         function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
         }
 
         function showPosition(position) {
-        x.innerHTML = "Latitude: " + position.coords.latitude +
-        "<br>Longitude: " + position.coords.longitude;
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
         }
-        $('#btn-form').click(function(){
+        $('#btn-form').click(function() {
             console.log("sbmit ditekan")
             window.location.href = "<?php echo $linkloginonly; ?>?dst=<?php echo $linkorigesc; ?>&username=T-<?php echo $macesc; ?>"
             /*$.ajax({

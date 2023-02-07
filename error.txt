@@ -12,89 +12,30 @@ AdminLTE LogoImage Server
  Carousel 5
  Video
  Brand Sponsor
+202301/BUD/00058
+202301/BUD/00057
+202301/BUD/00056
+202301/BUD/00055
+
+select id,budgeting_number,subject from submissions a where budgeting_number='202301/BUD/00058';
+select id,itemname from submission_details where submission_id=1542;
+insert into deletedsubmission_details select * from submission_details where id=1314
+delete from submission_details where id=1314
+insert into deletedsubmissions select * from submissions where id=1542
+delete from submissions where id=1542
 
 
+select id,budgeting_number,subject from submissions a where budgeting_number='202301/BUD/00057';
+select id,itemname from submission_details where submission_id=1541;
+insert into deletedsubmission_details select * from submission_details where id=1313
+insert into deletedsubmissions select * from submissions where id=1541
 
-Pengaturan
-brand
-AdminLTE Logobrand
-AdminLTE LogoImage Server
- Brands
- Carousel
-A PHP Error was encountered
-Severity: Notice
+select id,budgeting_number,subject from submissions a where budgeting_number='202301/BUD/00056';
+select id,itemname from submission_details where submission_id=1540;
+insert into deletedsubmission_details select * from submission_details where id=1312;
+insert into deletedsubmissions select * from submissions where id=1540;
 
-Message: Undefined variable: activemenu
-
-Filename: admin/sidebar.php
-
-Line Number: 25
-
-Backtrace:
-
-File: /home/klien/www/hotspot/application/views/admin/sidebar.php
-Line: 25
-Function: _error_handler
-
-File: /home/klien/www/hotspot/application/views/admin/brand.php
-Line: 61
-Function: view
-
-File: /home/klien/www/hotspot/application/controllers/Manage.php
-Line: 18
-Function: view
-
-File: /home/klien/www/hotspot/index.php
-Line: 315
-Function: require_once
-
-">
-A PHP Error was encountered
-Severity: Notice
-
-Message: Undefined variable: activemenu
-
-Filename: admin/sidebar.php
-
-Line Number: 26
-
-Backtrace:
-
-File: /home/klien/www/hotspot/application/views/admin/sidebar.php
-Line: 26
-Function: _error_handler
-
-File: /home/klien/www/hotspot/application/views/admin/brand.php
-Line: 61
-Function: view
-
-File: /home/klien/www/hotspot/application/controllers/Manage.php
-Line: 18
-Function: view
-
-File: /home/klien/www/hotspot/index.php
-Line: 315
-Function: require_once
-
-"> 
-Video
-
-Brand Sponsor
-
-Users
-
-Seqwences
-
-brand
-Maksimal 5MB (.mp4)
-puji@padi.net.id   Logout
-Gambar
-Upload
- 
- 
- 
- 
- 
- 
- 
-Version 3.2.0Copyright © 2014-2021 PadiApp. All rights reserved.
+select id,budgeting_number,subject from submissions a where budgeting_number='202301/BUD/00055';
+select id,itemname from submission_details where submission_id=1539;
+insert into deletedsubmission_details select * from submission_details where id=1311;
+insert into deletedsubmissions select * from submissions where id=1539;

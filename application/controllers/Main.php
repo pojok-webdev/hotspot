@@ -111,6 +111,11 @@ Class Main extends CI_Controller{
         ));
         echo json_encode('{"result":"ok"}');
     }
+    function banner(){
+        $id = $this->uri->segment(3);
+        $objs = $this->crud->read('banners',array('role'=>'banner'.$id));
+        echo $objs['res'][0]->name;
+    }
     function setbanner(){
         $params = $this->input->post();
         /*$this->crud->upsert('brands',array(

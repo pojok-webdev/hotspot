@@ -231,7 +231,7 @@
 					success: function(response){
 						if(response != 0){
                         console.log('Response',response)
-                location.reload();
+                //location.reload();
 						}
 						else{
                 console.log(response)

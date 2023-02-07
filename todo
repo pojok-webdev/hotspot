@@ -21,3 +21,9 @@ Mala
 Bu Sisca
 - Media pembayaran dan skema admin charge (bersama Pak Felix) 
 - Pricelist tenant dan brand  (bersama Mas Dwi)
+
+
+
+
+create table banners (name varchar(200),role varchar(100) primary key,createuser varchar(200),createdate timestamp default current_timestamp());
+alter table banners add primary key(role);

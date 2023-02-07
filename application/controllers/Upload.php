@@ -18,7 +18,7 @@ Class Upload extends CI_Controller{
         /* Upload file */
             $time = time();
         $target_dir = $this->config->item('uploadpath');//"C:\phpworkspace\imageserver\uploads\ ";//"/uploads/";
-        if($this->padiconfig->development){
+        if(!$this->config->item('development')){
             $target_dir = '/home/klien/www/hotspot/uploads/brands/';
         }else{
             $target_dir = 'C:\phpworkspace\hotspot\uploads\carousels\\';
@@ -46,7 +46,7 @@ Class Upload extends CI_Controller{
         /* Upload file */
             $time = time();
         $target_dir = $this->config->item('uploadpath');//"C:\phpworkspace\imageserver\uploads\ ";//"/uploads/";
-        if($this->padiconfig->development){
+        if(!$this->config->item('development')){
             $target_dir = '/home/klien/www/hotspot/uploads/carousels/';
         }else{
             $target_dir = 'C:\phpworkspace\hotspot\uploads\carousels\\';
@@ -73,7 +73,7 @@ Class Upload extends CI_Controller{
         }else{
         /* Upload file */
             $time = time();
-        if($this->padiconfig->development){
+            if(!$this->config->item('development')){
             $target_dir = '/home/klien/www/hotspot/uploads/videos/';
         }else{
             $target_dir = 'C:\phpworkspace\hotspot\uploads\videos\\';
@@ -92,19 +92,21 @@ Class Upload extends CI_Controller{
 
         /* Getting file name */
         $filename = $_FILES['file']['name'];
-
+        $filetype = $_FILES['file']['type'];
+        $tmp2 = explode("/",$filetype);
+        $type = $tmp2[1];
         $uploadOk = 1;
 
         if($uploadOk == 0){
         echo 0;
         }else{
             $time = time();
-        if($this->padiconfig->development){
+        if(!$this->config->item('development')){
             $target_dir = '/home/klien/www/hotspot/uploads/brands/';
         }else{
             $target_dir = 'C:\phpworkspace\hotspot\uploads\brands\\';
         }
-        $location = trim($target_dir)."brand".date("YmdHis",$time).".mp4";
+        $location = trim($target_dir)."banner".date("YmdHis",$time).".".$type;
         if(move_uploaded_file($_FILES['file']['tmp_name'], $location)){
             echo json_encode($_FILES);
         }else{
@@ -115,7 +117,7 @@ Class Upload extends CI_Controller{
     function remove(){
         $removetype= $this->uri->segment(3);
         $name = $this->uri->segment(4);
-        if($this->padiconfig->development){
+        if(!$this->config->item('development')){
             $target_dir = '/home/klien/www/hotspot/uploads/'.$removetype.'/';
         }else{
             $target_dir = 'C:\phpworkspace\hotspot\uploads\\'.$removetype.'\\';
@@ -134,7 +136,7 @@ Class Upload extends CI_Controller{
         }else{
         /* Upload file */
             $time = time();
-        if(1==1){
+            if(!$this->config->item('development')){
             $target_dir = '/home/klien/www/hotspot/uploads/sponsors/';
         }else{
             $target_dir = 'C:\phpworkspace\hotspot\uploads\sponsors\\';
